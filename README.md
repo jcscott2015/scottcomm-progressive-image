@@ -1,6 +1,6 @@
 # scottcomm-progressive-image
 
-A reusable React progressive image component extracted from scottcomm-vite-react.
+A reusable React progressive image component.
 
 It renders a blurred thumbnail first, lazy-loads the full image when visible, and swaps to a fallback icon when the full image is missing or errors.
 
@@ -27,12 +27,17 @@ npm i scottcomm-progressive-image
 ## Usage
 
 ```tsx
-import ProgressiveImage from 'scottcomm-progressive-image';
-import 'scottcomm-progressive-image/styles.css';
+import ProgressiveImage from "scottcomm-progressive-image";
+import "scottcomm-progressive-image/styles.css";
 
 export function Example() {
   return (
-    <ProgressiveImage fullSrc="https://example.com/full.jpg" thumbSrc="https://example.com/thumb.jpg" alt="Example image" className="my-image" />
+    <ProgressiveImage
+      fullSrc="https://example.com/full.jpg"
+      thumbSrc="https://example.com/thumb.jpg"
+      alt="Example image"
+      className="my-image"
+    />
   );
 }
 ```
