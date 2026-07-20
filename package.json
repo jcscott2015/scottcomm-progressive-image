@@ -1,0 +1,63 @@
+{
+  "name": "scottcomm-progressive-image",
+  "version": "1.0.0",
+  "description": "Progressive React image component with lazy visibility loading and fallback rendering.",
+  "type": "module",
+  "license": "MIT",
+  "author": "John C. Scott",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcscott2015/scottcomm-vite-react.git"
+  },
+  "keywords": [
+    "react",
+    "progressive-image",
+    "lazy-load",
+    "intersection-observer"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/index.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist coverage *.tsbuildinfo",
+    "build": "tsup",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run test:run && npm run build",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^29.1.1",
+    "tsup": "^8.5.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12",
+    "vitest": "^4.1.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

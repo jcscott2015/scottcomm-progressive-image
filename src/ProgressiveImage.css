@@ -1,0 +1,34 @@
+.progressive-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progressive-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.progressive-image .img-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  clip-path: inset(0);
+}
+
+.progressive-image .img-full {
+  opacity: 0;
+}
+
+.progressive-image[data-loaded='true'] .img-full {
+  opacity: 1;
+}
+
+.progressive-image[data-loaded='true'] .img-thumb {
+  display: none;
+}

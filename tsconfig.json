@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": [
+            "ES2023",
+            "DOM"
+        ],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "jsx": "react-jsx",
+        "strict": true,
+        "skipLibCheck": true,
+        "ignoreDeprecations": "6.0",
+        "verbatimModuleSyntax": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "noEmit": true,
+        "types": [
+            "vitest/globals"
+        ]
+    },
+    "include": [
+        "src",
+        "vitest.setup.ts",
+        "vitest.config.ts",
+        "tsup.config.ts"
+    ]
+}
